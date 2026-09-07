@@ -17,7 +17,7 @@ info:
       - Delete Account
 
 servers:
-  - url: https://orgos-backend-l7mx.onrender.com
+  - url: https://orgos-backend-h7ad.onrender.com
     description: Local Development Server
 
 tags:

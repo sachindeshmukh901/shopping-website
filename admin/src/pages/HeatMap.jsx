@@ -251,7 +251,7 @@ function HeatMap() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/heatmap"
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/heatmap"
                 );
 
 

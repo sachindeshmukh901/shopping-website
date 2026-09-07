@@ -102,7 +102,7 @@ function Orders({
             let response =
                 await fetch(
 
-                    "https://orgos-backend-l7mx.onrender.com/api/orders/vendor",
+                    "https://orgos-backend-h7ad.onrender.com/api/orders/vendor",
 
                     {
 
@@ -268,7 +268,7 @@ function Orders({
             let response =
                 await fetch(
 
-                    `https://orgos-backend-l7mx.onrender.com/api/orders/vendor/${orderVendorId}/status`,
+                    `https://orgos-backend-h7ad.onrender.com/api/orders/vendor/${orderVendorId}/status`,
 
                     {
 
@@ -1104,7 +1104,7 @@ function Orders({
                                                                         "http"
                                                                     )
                                                                         ? item.image
-                                                                        : `https://orgos-backend-l7mx.onrender.com${item.image}`
+                                                                        : `https://orgos-backend-h7ad.onrender.com${item.image}`
                                                                     : "";
 
 

@@ -1,4 +1,4 @@
-const API_URL = "https://orgos-backend-l7mx.onrender.com/api/products";
+const API_URL = "https://orgos-backend-h7ad.onrender.com/api/products";
 
 
 // ========================================
@@ -35,7 +35,7 @@ export const getProducts = async (gender = "") => {
 
 export const getCategories = async () => {
 
-    let response = await fetch("https://orgos-backend-l7mx.onrender.com/api/categories");
+    let response = await fetch("https://orgos-backend-h7ad.onrender.com/api/categories");
 
     if (!response.ok) {
         throw new Error("Failed to fetch categories");
@@ -114,12 +114,12 @@ export const getProductImage = (image) => {
     // Agar database me uploads/products/... hai
     if (cleanImage.startsWith("uploads/")) {
 
-        return `https://orgos-backend-l7mx.onrender.com/${cleanImage}`;
+        return `https://orgos-backend-h7ad.onrender.com/${cleanImage}`;
 
     }
 
 
     // Agar sirf filename hai
-    return `https://orgos-backend-l7mx.onrender.com/uploads/products/${cleanImage}`;
+    return `https://orgos-backend-h7ad.onrender.com/uploads/products/${cleanImage}`;
 
 };

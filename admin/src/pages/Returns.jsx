@@ -74,7 +74,7 @@ function Returns() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/returns",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/returns",
                     {
                         method: "GET",
                         headers: {
@@ -201,7 +201,7 @@ function Returns() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/returns/${returnId}/status`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/returns/${returnId}/status`,
                     {
                         method: "PATCH",
                         headers: {
@@ -301,7 +301,7 @@ function Returns() {
 
         return image.startsWith("http")
             ? image
-            : `https://orgos-backend-l7mx.onrender.com${image}`;
+            : `https://orgos-backend-h7ad.onrender.com${image}`;
 
     };
 

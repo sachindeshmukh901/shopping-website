@@ -85,7 +85,7 @@ function Payments() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/payments",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/payments",
                     {
                         method: "GET",
                         headers: {

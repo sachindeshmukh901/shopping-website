@@ -49,12 +49,12 @@ let getImageUrl = (image) => {
         cleanImage.startsWith("uploads/")
     ) {
 
-        return `https://orgos-backend-l7mx.onrender.com/${cleanImage}`;
+        return `https://orgos-backend-h7ad.onrender.com/${cleanImage}`;
 
     }
 
 
-    return `https://orgos-backend-l7mx.onrender.com/uploads/products/${cleanImage}`;
+    return `https://orgos-backend-h7ad.onrender.com/uploads/products/${cleanImage}`;
 
 };
 

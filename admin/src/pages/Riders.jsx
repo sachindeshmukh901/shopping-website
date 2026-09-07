@@ -104,7 +104,7 @@ function Riders() {
                 await Promise.all([
 
                     fetch(
-                        "https://orgos-backend-l7mx.onrender.com/api/admin/riders",
+                        "https://orgos-backend-h7ad.onrender.com/api/admin/riders",
                         {
                             method: "GET",
                             headers: authHeaders()
@@ -112,7 +112,7 @@ function Riders() {
                     ),
 
                     fetch(
-                        "https://orgos-backend-l7mx.onrender.com/api/admin/deliveries",
+                        "https://orgos-backend-h7ad.onrender.com/api/admin/deliveries",
                         {
                             method: "GET",
                             headers: authHeaders()
@@ -227,7 +227,7 @@ function Riders() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/riders",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/riders",
                     {
                         method: "POST",
                         headers: authHeaders(),
@@ -300,7 +300,7 @@ function Riders() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/riders/${rider.rider_id}`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/riders/${rider.rider_id}`,
                     {
                         method: "DELETE",
                         headers: authHeaders()
@@ -360,7 +360,7 @@ function Riders() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/deliveries/${orderId}/assign`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/deliveries/${orderId}/assign`,
                     {
                         method: "PATCH",
                         headers: authHeaders(),

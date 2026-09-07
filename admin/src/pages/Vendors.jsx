@@ -68,7 +68,7 @@ function Vendors() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/vendors",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/vendors",
                     {
                         method: "GET",
 
@@ -186,7 +186,7 @@ function Vendors() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/vendors/${vendorId}/${endpoint}`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/vendors/${vendorId}/${endpoint}`,
                     {
                         method: "PUT",
 

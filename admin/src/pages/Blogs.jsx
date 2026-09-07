@@ -43,7 +43,7 @@ function Blogs() {
                 return;
             }
 
-            const response = await fetch("https://orgos-backend-l7mx.onrender.com/api/blogs/admin", {
+            const response = await fetch("https://orgos-backend-h7ad.onrender.com/api/blogs/admin", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -118,8 +118,8 @@ function Blogs() {
             setError("");
 
             const url = editingBlogId
-                ? `https://orgos-backend-l7mx.onrender.com/api/blogs/admin/${editingBlogId}`
-                : "https://orgos-backend-l7mx.onrender.com/api/blogs/admin";
+                ? `https://orgos-backend-h7ad.onrender.com/api/blogs/admin/${editingBlogId}`
+                : "https://orgos-backend-h7ad.onrender.com/api/blogs/admin";
 
             const method = editingBlogId ? "PUT" : "POST";
 
@@ -178,7 +178,7 @@ function Blogs() {
                 return;
             }
 
-            const response = await fetch(`https://orgos-backend-l7mx.onrender.com/api/blogs/admin/${blogId}`, {
+            const response = await fetch(`https://orgos-backend-h7ad.onrender.com/api/blogs/admin/${blogId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -207,7 +207,7 @@ function Blogs() {
                 return;
             }
 
-            const response = await fetch(`https://orgos-backend-l7mx.onrender.com/api/blogs/admin/${blogId}/status`, {
+            const response = await fetch(`https://orgos-backend-h7ad.onrender.com/api/blogs/admin/${blogId}/status`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

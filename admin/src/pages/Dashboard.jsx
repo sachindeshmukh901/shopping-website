@@ -224,7 +224,7 @@ function Dashboard() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/dashboard/stats",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/dashboard/stats",
                     {
                         method: "GET",
 
@@ -315,7 +315,7 @@ function Dashboard() {
 
                 let response =
                     await fetch(
-                        "https://orgos-backend-l7mx.onrender.com/api/admin/recent-registrations",
+                        "https://orgos-backend-h7ad.onrender.com/api/admin/recent-registrations",
                         {
                             method: "GET",
 

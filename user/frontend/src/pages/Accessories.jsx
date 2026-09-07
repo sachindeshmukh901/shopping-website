@@ -98,7 +98,7 @@ function Accessories() {
       return image;
     }
 
-    return `https://orgos-backend-l7mx.onrender.com${image}`;
+    return `https://orgos-backend-h7ad.onrender.com${image}`;
 
   };
 
@@ -176,7 +176,7 @@ function Accessories() {
 
       let response =
         await fetch(
-          "https://orgos-backend-l7mx.onrender.com/api/products"
+          "https://orgos-backend-h7ad.onrender.com/api/products"
         );
 
 

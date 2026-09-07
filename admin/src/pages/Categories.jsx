@@ -50,7 +50,7 @@ function Categories() {
             }
 
             let response = await fetch(
-                "https://orgos-backend-l7mx.onrender.com/api/admin/categories",
+                "https://orgos-backend-h7ad.onrender.com/api/admin/categories",
                 {
                     method: "GET",
                     headers: {
@@ -110,11 +110,11 @@ function Categories() {
             setSaving(true);
             setError("");
 
-            let url = "https://orgos-backend-l7mx.onrender.com/api/admin/categories";
+            let url = "https://orgos-backend-h7ad.onrender.com/api/admin/categories";
             let method = "POST";
 
             if (editingCategoryId) {
-                url = `https://orgos-backend-l7mx.onrender.com/api/admin/categories/${editingCategoryId}`;
+                url = `https://orgos-backend-h7ad.onrender.com/api/admin/categories/${editingCategoryId}`;
                 method = "PUT";
             }
 
@@ -178,7 +178,7 @@ function Categories() {
             let token = localStorage.getItem("adminToken");
 
             let response = await fetch(
-                `https://orgos-backend-l7mx.onrender.com/api/admin/categories/${categoryId}`,
+                `https://orgos-backend-h7ad.onrender.com/api/admin/categories/${categoryId}`,
                 {
                     method: "DELETE",
                     headers: {

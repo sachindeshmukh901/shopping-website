@@ -98,7 +98,7 @@ function Products() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/products",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/products",
                     {
                         method: "GET",
 
@@ -350,7 +350,7 @@ function Products() {
             setImagePreview(
                 product.image.startsWith("http")
                     ? product.image
-                    : `https://orgos-backend-l7mx.onrender.com${product.image}`
+                    : `https://orgos-backend-h7ad.onrender.com${product.image}`
             );
 
         } else {
@@ -510,9 +510,9 @@ function Products() {
             let url =
                 editingProduct
 
-                    ? `https://orgos-backend-l7mx.onrender.com/api/admin/products/${editingProduct.product_id}`
+                    ? `https://orgos-backend-h7ad.onrender.com/api/admin/products/${editingProduct.product_id}`
 
-                    : "https://orgos-backend-l7mx.onrender.com/api/admin/products";
+                    : "https://orgos-backend-h7ad.onrender.com/api/admin/products";
 
 
             let method =
@@ -642,7 +642,7 @@ function Products() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/products/${productId}`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/products/${productId}`,
                     {
                         method: "DELETE",
 
@@ -724,7 +724,7 @@ function Products() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/products/${productId}/status`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/products/${productId}/status`,
                     {
                         method: "PUT",
 
@@ -840,7 +840,7 @@ function Products() {
         }
 
 
-        return `https://orgos-backend-l7mx.onrender.com${image}`;
+        return `https://orgos-backend-h7ad.onrender.com${image}`;
 
     };
 

@@ -69,7 +69,7 @@ function Users() {
 
             let response =
                 await fetch(
-                    "https://orgos-backend-l7mx.onrender.com/api/admin/users",
+                    "https://orgos-backend-h7ad.onrender.com/api/admin/users",
                     {
                         method: "GET",
 
@@ -185,7 +185,7 @@ function Users() {
 
             let response =
                 await fetch(
-                    `https://orgos-backend-l7mx.onrender.com/api/admin/users/${userId}/${endpoint}`,
+                    `https://orgos-backend-h7ad.onrender.com/api/admin/users/${userId}/${endpoint}`,
                     {
                         method: "PUT",
 
@@ -821,7 +821,7 @@ function Users() {
                                                                                     "http"
                                                                                 )
                                                                                     ? user.profile_image
-                                                                                    : `https://orgos-backend-l7mx.onrender.com${user.profile_image}`
+                                                                                    : `https://orgos-backend-h7ad.onrender.com${user.profile_image}`
                                                                             }
                                                                             alt={
                                                                                 user.full_name ||

@@ -77,7 +77,7 @@ function FuturePrice() {
       setLoadingProducts(true);
 
       let response = await fetch(
-        "https://orgos-backend-l7mx.onrender.com/api/products"
+        "https://orgos-backend-h7ad.onrender.com/api/products"
       );
 
       let data = await response.json();
@@ -275,7 +275,7 @@ function FuturePrice() {
 
       let response =
         await fetch(
-          `https://orgos-backend-l7mx.onrender.com/api/products/${alertItem.productId}`
+          `https://orgos-backend-h7ad.onrender.com/api/products/${alertItem.productId}`
         );
 
 
@@ -445,7 +445,7 @@ function FuturePrice() {
 
         let response =
           await fetch(
-            `https://orgos-backend-l7mx.onrender.com/api/products/${alertItem.productId}`
+            `https://orgos-backend-h7ad.onrender.com/api/products/${alertItem.productId}`
           );
 
 

@@ -52,7 +52,7 @@ function Reviews() {
     // ======================================================
 
     let API_URL =
-        "https://orgos-backend-l7mx.onrender.com";
+        "https://orgos-backend-h7ad.onrender.com";
 
 
     // ======================================================

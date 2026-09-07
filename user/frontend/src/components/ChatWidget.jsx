@@ -21,7 +21,7 @@ function ChatWidget() {
 
   let API_URL =
     import.meta.env.VITE_API_URL ||
-    "https://orgos-backend-l7mx.onrender.com/api";
+    "https://orgos-backend-h7ad.onrender.com/api";
 
 
   // =====================================================
