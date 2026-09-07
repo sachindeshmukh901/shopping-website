@@ -1,0 +1,202 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.blog-hero{
+width:100%;
+}
+
+.blog-hero img{
+width:100%;
+height:auto;
+display:block;
+object-fit:cover;
+}
+
+/* POSTS */
+
+.latest-posts{
+width:100%;
+padding:60px;
+}
+
+.latest-posts h2{
+font-size:48px;
+margin-bottom:40px;
+color:#111;
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.blog-card{
+width:100%;
+}
+
+.blog-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.blog-card h3{
+font-size:26px;
+margin-top:15px;
+line-height:1.4;
+color:#111;
+}
+
+.blog-card p{
+margin-top:12px;
+font-size:15px;
+line-height:1.6;
+color:#666;
+}
+
+.blog-meta{
+display:flex;
+align-items:center;
+gap:25px;
+margin-top:18px;
+flex-wrap:wrap;
+}
+
+.blog-meta span{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:15px;
+color:#666;
+}
+
+/* ======================
+   LARGE TABLET
+====================== */
+
+@media(max-width:1200px){
+
+.latest-posts{
+padding:50px 40px;
+}
+
+.blog-grid{
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+}
+
+}
+
+/* ======================
+   TABLET
+====================== */
+
+@media(max-width:992px){
+
+.latest-posts h2{
+font-size:40px;
+}
+
+.blog-card img{
+height:220px;
+}
+
+.blog-card h3{
+font-size:22px;
+}
+
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:768px){
+
+.latest-posts{
+padding:30px 20px;
+}
+
+.latest-posts h2{
+font-size:32px;
+margin-bottom:25px;
+text-align:center;
+}
+
+.blog-grid{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.blog-card img{
+height:220px;
+}
+
+.blog-card h3{
+font-size:20px;
+}
+
+.blog-card p{
+font-size:14px;
+}
+
+.blog-meta{
+gap:15px;
+}
+
+.blog-meta span{
+font-size:14px;
+}
+
+}
+
+/* ======================
+   SMALL MOBILE
+====================== */
+
+@media(max-width:480px){
+
+.latest-posts{
+padding:20px 15px;
+}
+
+.latest-posts h2{
+font-size:28px;
+}
+
+.blog-card img{
+height:190px;
+border-radius:10px;
+}
+
+.blog-card h3{
+font-size:18px;
+}
+
+.blog-card p{
+font-size:13px;
+line-height:1.5;
+}
+
+.blog-meta{
+flex-direction:column;
+align-items:flex-start;
+gap:8px;
+}
+
+.blog-meta span{
+font-size:13px;
+}
+
+}

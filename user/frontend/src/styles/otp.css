@@ -1,0 +1,185 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+font-family:serif;
+}
+
+/* PAGE */
+
+.otp-page{
+width:100%;
+min-height:100vh;
+background:#1f5f2e;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px 20px;
+}
+
+/* BOX */
+
+.otp-box{
+width:100%;
+max-width:420px;
+background:#f3f3f3;
+padding:60px 40px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+
+.otp-box h1{
+font-size:48px;
+margin-bottom:15px;
+color:#111;
+}
+
+.otp-box p{
+font-size:16px;
+color:#666;
+margin-bottom:40px;
+line-height:1.6;
+}
+
+/* INPUTS */
+
+.otp-inputs{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.otp-inputs input{
+width:60px;
+height:60px;
+text-align:center;
+font-size:28px;
+font-weight:700;
+border:2px solid #444;
+outline:none;
+background:white;
+border-radius:8px;
+transition:0.3s;
+}
+
+.otp-inputs input:focus{
+border-color:#1f5f2e;
+transform:scale(1.05);
+}
+
+/* BUTTON */
+
+.otp-box button{
+width:100%;
+height:56px;
+margin-top:40px;
+background:#9ea0aa;
+color:white;
+border:none;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+border-radius:8px;
+transition:0.3s;
+}
+
+.otp-box button:hover{
+background:#7f828d;
+}
+
+/* RESEND */
+
+.resend{
+margin-top:20px;
+font-size:15px;
+color:#555;
+cursor:pointer;
+}
+
+.resend span{
+color:#1f5f2e;
+font-weight:700;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:768px){
+
+.otp-box{
+max-width:380px;
+padding:50px 30px;
+}
+
+.otp-box h1{
+font-size:40px;
+}
+
+.otp-inputs{
+gap:12px;
+}
+
+.otp-inputs input{
+width:55px;
+height:55px;
+font-size:24px;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.otp-page{
+padding:20px 15px;
+}
+
+.otp-box{
+max-width:100%;
+padding:40px 20px;
+}
+
+.otp-box h1{
+font-size:32px;
+margin-bottom:12px;
+}
+
+.otp-box p{
+font-size:14px;
+margin-bottom:30px;
+}
+
+.otp-inputs{
+gap:10px;
+}
+
+.otp-inputs input{
+width:48px;
+height:48px;
+font-size:22px;
+border-radius:6px;
+}
+
+.otp-box button{
+height:50px;
+font-size:16px;
+margin-top:30px;
+}
+
+.resend{
+font-size:14px;
+}
+
+}

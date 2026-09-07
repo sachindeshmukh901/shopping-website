@@ -1,0 +1,1341 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    width: 100%;
+
+    height: 85px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+
+    width: 120px;
+
+    min-width: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    cursor: pointer;
+
+}
+
+
+.navbar-logo img {
+
+    width: 70px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    list-style: none;
+
+    flex: 1;
+
+}
+
+
+.nav-links li {
+
+    position: relative;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color: #111111;
+
+    white-space: nowrap;
+
+    padding: 32px 0 29px;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.nav-links li:hover {
+
+    color: #0d6efd;
+
+}
+
+
+/* =====================================================
+   ACTIVE PAGE
+===================================================== */
+
+.nav-links li.active {
+
+    color: #000000;
+
+    font-weight: 600;
+
+}
+
+
+.nav-links li.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 20px;
+
+    height: 2px;
+
+    background: #111111;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   MOBILE-ONLY QUICK LINKS (hidden on desktop)
+===================================================== */
+
+.mobile-only-link {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   NAV ICONS
+===================================================== */
+
+.nav-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 20px;
+
+    min-width: max-content;
+
+}
+
+
+.nav-icon {
+
+    font-size: 26px;
+
+    color: #111111;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.nav-icon:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =====================================================
+   SEARCH WRAPPER
+===================================================== */
+
+.navbar-search-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   SEARCH ICON
+===================================================== */
+
+.search-icon {
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.navbar-search-box {
+
+    position: absolute;
+
+    top: 48px;
+
+    right: -110px;
+
+    width: 390px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.16);
+
+    overflow: hidden;
+
+    z-index: 99999;
+
+}
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.search-input-wrapper {
+
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.search-input-wrapper > svg {
+
+    flex-shrink: 0;
+
+    font-size: 20px;
+
+    color: #777777;
+
+}
+
+
+.search-input-wrapper input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    color: #222222;
+
+}
+
+
+.search-input-wrapper input::placeholder {
+
+    color: #999999;
+
+}
+
+
+/* =====================================================
+   CLOSE SEARCH
+===================================================== */
+
+.search-close {
+
+    cursor: pointer;
+
+    font-size: 20px !important;
+
+    color: #777777 !important;
+
+    flex-shrink: 0;
+
+}
+
+
+.search-close:hover {
+
+    color: #111111 !important;
+
+}
+
+
+/* =====================================================
+   SEARCH RESULTS
+===================================================== */
+
+.search-results {
+
+    width: 100%;
+
+    max-height: 430px;
+
+    overflow-y: auto;
+
+}
+
+
+/* Scrollbar */
+
+.search-results::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+
+.search-results::-webkit-scrollbar-thumb {
+
+    background: #cccccc;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   SEARCH MESSAGE
+===================================================== */
+
+.search-message {
+
+    padding: 25px 18px;
+
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+.search-message strong {
+
+    color: #222222;
+
+}
+
+
+/* =====================================================
+   SEARCH RESULT TITLE
+===================================================== */
+
+.search-result-title {
+
+    padding: 13px 17px 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    color: #888888;
+
+}
+
+
+/* =====================================================
+   SEARCH PRODUCT
+===================================================== */
+
+.search-product {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 15px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.search-product:hover {
+
+    background: #f7f7f7;
+
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+.search-product-image {
+
+    width: 58px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #f3f3f3;
+
+}
+
+
+.search-product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.search-product-image svg {
+
+    font-size: 21px;
+
+    color: #999999;
+
+}
+
+
+/* =====================================================
+   PRODUCT INFO
+===================================================== */
+
+.search-product-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.search-product-info h4 {
+
+    margin: 0 0 4px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #222222;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.search-product-info p {
+
+    margin: 0 0 4px;
+
+    font-size: 12px;
+
+    color: #888888;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.search-product-info strong {
+
+    font-size: 13px;
+
+    color: #111111;
+
+}
+
+
+/* =====================================================
+   SEARCH ARROW
+===================================================== */
+
+.search-arrow {
+
+    flex-shrink: 0;
+
+    font-size: 15px;
+
+    color: #999999;
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.search-product:hover .search-arrow {
+
+    transform: translateX(3px);
+
+    color: #111111;
+
+}
+
+
+/* =====================================================
+   VIEW ALL SEARCH
+===================================================== */
+
+.view-all-search {
+
+    width: calc(100% - 30px);
+
+    margin: 10px 15px 15px;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.view-all-search:hover {
+
+    background: #333333;
+
+}
+
+
+/* =====================================================
+   WISHLIST / CART
+===================================================== */
+
+.cart-icon {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =====================================================
+   COUNT
+===================================================== */
+
+.cart-count {
+
+    position: absolute;
+
+    top: -9px;
+
+    right: -9px;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: red;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   USER
+===================================================== */
+
+.user-name {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #111111;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.user-name:hover {
+
+    color: #0d6efd;
+
+}
+
+
+/* =====================================================
+   MOBILE MENU ICON
+===================================================== */
+
+.menu-icon {
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    color: #111111;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+
+        padding: 0 30px;
+
+    }
+
+
+    .navbar-logo {
+
+        width: 100px;
+
+        min-width: 100px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 20px;
+
+    }
+
+
+    .nav-links li {
+
+        font-size: 15px;
+
+    }
+
+
+    .nav-icons {
+
+        gap: 16px;
+
+    }
+
+
+    .user-name {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+
+        padding: 0 22px;
+
+    }
+
+
+    .navbar-logo {
+
+        width: 85px;
+
+        min-width: 85px;
+
+    }
+
+
+    .navbar-logo img {
+
+        width: 62px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+    }
+
+
+    .nav-links li {
+
+        font-size: 14px;
+
+    }
+
+
+    .nav-icons {
+
+        gap: 13px;
+
+    }
+
+
+    .nav-icon {
+
+        font-size: 23px;
+
+    }
+
+
+    .user-name {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* --------------------------------------------------
+       NAVBAR AS 3 FLEX ZONES:
+       [ hamburger ] [ logo (perfectly centered) ] [ icons ]
+       Using `order` on flex children — more reliable across
+       browsers than grid+order for out-of-flow siblings.
+    -------------------------------------------------- */
+
+    .navbar {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        height: 64px;
+
+        padding: 0 12px;
+
+    }
+
+
+    .navbar-logo {
+
+        order: 2;
+
+        flex: 1;
+
+        width: auto;
+        min-width: 0;
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+
+    .navbar-logo img {
+
+        width: 48px;
+
+    }
+
+
+    /* Hide desktop links -> slide-down mobile dropdown */
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 64px;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        max-height: calc(100vh - 64px);
+
+        overflow-y: auto;
+
+        background: #ffffff;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 6px 0 24px;
+
+        box-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.12);
+
+        transform: translateY(-12px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        z-index: 1001;
+
+        transition:
+            transform 0.28s ease,
+            opacity 0.28s ease,
+            visibility 0.28s ease;
+
+    }
+
+
+    .nav-links.active {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+
+        text-align: left;
+
+        padding: 15px 22px;
+
+        font-size: 15px;
+
+        border-bottom: 1px solid #f2f2f2;
+
+    }
+
+
+    .nav-links li.active::after {
+
+        display: none;
+
+    }
+
+
+    .nav-links li.active {
+
+        background: #f7f9ff;
+
+        border-left: 3px solid #111111;
+
+        padding-left: 19px;
+
+    }
+
+
+    /* Mobile-only quick links (Wishlist / Account) */
+
+    .mobile-only-link {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 10px;
+
+        color: #333333;
+
+        font-weight: 600;
+
+    }
+
+
+    .mobile-only-link svg {
+
+        font-size: 18px;
+
+        flex-shrink: 0;
+
+    }
+
+
+    .mobile-link-badge {
+
+        min-width: 18px;
+
+        height: 18px;
+
+        padding: 0 5px;
+
+        border-radius: 50%;
+
+        background: red;
+
+        color: #ffffff;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    /* Icons zone (right side) */
+
+    .nav-icons {
+
+        order: 3;
+
+        flex: 0 0 auto;
+
+        margin: 0;
+
+        gap: 12px;
+
+    }
+
+
+    .nav-icon {
+
+        font-size: 21px;
+
+    }
+
+
+    .user-name {
+
+        max-width: 80px;
+
+        font-size: 12px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+    }
+
+
+    /* Hamburger toggle (left zone) — real circular tap target,
+       like a normal mobile e-commerce site */
+
+    .menu-icon {
+
+        order: 1;
+
+        flex: 0 0 auto;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 24px;
+
+        background: #f5f5f5;
+
+        transition:
+            background 0.2s ease;
+
+    }
+
+
+    .menu-icon:active {
+
+        background: #e8e8e8;
+
+    }
+
+
+    /* Search */
+
+    .navbar-search-wrapper {
+
+        position: static;
+
+    }
+
+
+    .navbar-search-box {
+
+        position: fixed;
+
+        top: 64px;
+
+        left: 10px;
+
+        right: 10px;
+
+        width: auto;
+
+        max-width: calc(100vw - 20px);
+
+        max-height: calc(100vh - 84px);
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+    .search-results {
+
+        max-height: calc(100vh - 150px);
+
+    }
+
+
+    /* Backdrop behind the slide-down menu */
+
+    .mobile-nav-backdrop {
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.45);
+
+        z-index: 999;
+
+        animation: fadeInBackdrop 0.25s ease;
+
+    }
+
+
+    @keyframes fadeInBackdrop {
+
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+
+        height: 60px;
+
+        padding: 0 10px;
+
+    }
+
+
+    .navbar-logo img {
+
+        width: 44px;
+
+    }
+
+
+    .nav-icons {
+
+        gap: 10px;
+
+    }
+
+
+    .nav-icon {
+
+        font-size: 20px;
+
+    }
+
+
+    .cart-count {
+
+        width: 17px;
+
+        height: 17px;
+
+        font-size: 9px;
+
+        top: -7px;
+
+        right: -6px;
+
+    }
+
+
+    .user-name {
+
+        display: none;
+
+    }
+
+
+    .menu-icon {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 21px;
+
+    }
+
+
+    .nav-links {
+
+        top: 60px;
+
+        max-height: calc(100vh - 60px);
+
+    }
+
+
+    .navbar-search-box {
+
+        top: 60px;
+
+        left: 8px;
+
+        right: 8px;
+
+        max-width: calc(100vw - 16px);
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .navbar {
+
+        padding: 0 8px;
+
+    }
+
+
+    .nav-icons {
+
+        gap: 7px;
+
+    }
+
+
+    .nav-icon {
+
+        font-size: 19px;
+
+    }
+
+
+    .navbar-logo img {
+
+        width: 40px;
+
+    }
+
+
+    .menu-icon {
+
+        width: 32px;
+        height: 32px;
+
+        font-size: 19px;
+
+    }
+
+}

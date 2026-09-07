@@ -1,0 +1,338 @@
+/* ====================================
+RESET
+==================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* ====================================
+PAGE
+==================================== */
+
+.edit-profile-page{
+
+width:100%;
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:40px 20px;
+
+background:linear-gradient(
+135deg,
+#dff6f0,
+#f5f7fb,
+#d7ecff
+);
+
+}
+
+/* ====================================
+CARD
+==================================== */
+
+.edit-card{
+
+width:100%;
+max-width:950px;
+
+background:#fff;
+
+border-radius:20px;
+
+padding:30px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.12);
+
+animation:fadeUp .6s ease;
+
+}
+
+/* ====================================
+TOP
+==================================== */
+
+.top-section{
+
+display:flex;
+
+justify-content:flex-start;
+
+margin-bottom:20px;
+margin-top: -20px;
+
+}
+
+.back-btn{
+
+padding:10px 20px;
+
+border:none;
+
+border-radius:8px;
+
+background:#0f766e;
+
+color:white;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.back-btn:hover{
+
+background:#115e59;
+
+transform:translateY(-2px);
+
+}
+
+/* ====================================
+TITLE
+==================================== */
+
+.edit-card h2{
+
+text-align:center;
+
+font-size:34px;
+
+color:#222;
+
+margin-bottom:35px;
+margin-top: -45px;
+
+}
+
+/* ====================================
+FORM GRID
+==================================== */
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:22px;
+
+}
+
+/* ====================================
+FORM GROUP
+==================================== */
+
+.form-group{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.form-group label{
+
+font-size:15px;
+
+font-weight:600;
+
+margin-bottom:8px;
+
+color:#444;
+
+}
+
+.form-group input,
+.form-group select{
+
+height:56px;
+
+padding:0 18px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+background:white;
+
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+border-color:#0f766e;
+
+box-shadow:0 0 10px rgba(15,118,110,.15);
+
+}
+
+/* ====================================
+BUTTON
+==================================== */
+
+.update-btn{
+
+width:100%;
+
+height:58px;
+
+margin-top:5px;
+
+border:none;
+
+border-radius:12px;
+
+background:#0f766e;
+
+color:white;
+
+font-size:17px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+0 10px 20px rgba(15,118,110,.25);
+
+}
+
+.update-btn:hover{
+
+background:#115e59;
+
+transform:translateY(-3px);
+
+}
+
+/* ====================================
+ANIMATION
+==================================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ====================================
+TABLET
+==================================== */
+
+@media(max-width:768px){
+
+.edit-card{
+
+padding:28px;
+
+}
+
+.edit-card h2{
+
+font-size:28px;
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.update-btn{
+
+height:54px;
+
+}
+
+}
+
+/* ====================================
+MOBILE
+==================================== */
+
+@media(max-width:480px){
+
+.edit-profile-page{
+
+padding:20px 12px;
+
+}
+
+.edit-card{
+
+padding:20px;
+
+border-radius:15px;
+
+}
+
+.edit-card h2{
+
+font-size:24px;
+
+margin-bottom:25px;
+
+}
+
+.back-btn{
+
+width:100%;
+
+}
+
+.form-group input,
+.form-group select{
+
+height:50px;
+
+font-size:14px;
+
+}
+
+.update-btn{
+
+height:50px;
+
+font-size:15px;
+
+}
+
+}

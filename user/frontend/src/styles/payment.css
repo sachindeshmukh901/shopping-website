@@ -1,0 +1,319 @@
+/* ===========================
+   PAYMENT PAGE
+=========================== */
+
+.payment-page{
+
+    width:90%;
+    max-width:1300px;
+    margin:40px auto;
+
+}
+
+.payment-page h1{
+
+    margin-bottom:30px;
+    font-size:38px;
+    font-weight:700;
+
+}
+
+.payment-container{
+
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.payment-left{
+
+    flex:2;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.payment-left h2{
+
+    margin-bottom:25px;
+    font-size:28px;
+
+}
+
+.radio-box{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+.radio-box input{
+
+    width:18px;
+    height:18px;
+    cursor:pointer;
+
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.payment-form{
+
+    margin-top:25px;
+
+}
+
+.payment-form input{
+
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    margin-bottom:18px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+
+}
+
+.payment-form input:focus{
+
+    border-color:#000;
+
+}
+
+.card-row{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.card-row input{
+
+    flex:1;
+
+}
+
+.cod-box{
+
+    margin-top:25px;
+    background:#f6f6f6;
+    padding:20px;
+    border-radius:10px;
+    color:#444;
+    font-size:17px;
+
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.payment-right{
+
+    flex:1;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    position:sticky;
+    top:100px;
+
+}
+
+.payment-right h2{
+
+    margin-bottom:25px;
+    font-size:28px;
+
+}
+
+.summary-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:15px 0;
+    font-size:16px;
+
+}
+
+.summary-item.total{
+
+    font-size:20px;
+    font-weight:bold;
+    color:#000;
+
+}
+
+.payment-right hr{
+
+    margin:18px 0;
+    border:none;
+    border-top:1px solid #ddd;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.place-order{
+
+    width:100%;
+    padding:16px;
+    border:none;
+    background:#000;
+    color:#fff;
+    font-size:17px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:25px;
+    transition:.3s;
+
+}
+
+.place-order:hover{
+
+    background:#444;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.payment-container{
+
+    flex-direction:column;
+
+}
+
+.payment-right{
+
+    width:100%;
+    position:static;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.payment-page{
+
+    width:95%;
+
+}
+
+.payment-page h1{
+
+    font-size:30px;
+    text-align:center;
+
+}
+
+.payment-left{
+
+    padding:20px;
+
+}
+
+.payment-right{
+
+    padding:20px;
+
+}
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:24px;
+
+}
+
+.card-row{
+
+    flex-direction:column;
+
+}
+
+.summary-item{
+
+    font-size:15px;
+
+}
+
+.place-order{
+
+    font-size:16px;
+
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.payment-page h1{
+
+    font-size:26px;
+
+}
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:22px;
+
+}
+
+.radio-box{
+
+    font-size:16px;
+
+}
+
+.payment-form input{
+
+    font-size:15px;
+    padding:13px;
+
+}
+
+.place-order{
+
+    padding:14px;
+
+}
+
+.summary-item.total{
+
+    font-size:18px;
+
+}
+
+}

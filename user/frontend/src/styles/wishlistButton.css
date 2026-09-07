@@ -1,0 +1,159 @@
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image {
+    position: relative;
+    width: 100%;
+}
+
+
+/* =========================================
+   WISHLIST CIRCLE BUTTON
+========================================= */
+
+.wishlist-btn {
+    position: absolute !important;
+
+    top: 12px !important;
+    right: 12px !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+    max-width: 42px !important;
+
+    min-height: 42px !important;
+    max-height: 42px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    /* background: #ffffff !important; */
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #333;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.25s ease;
+}
+
+
+/* =========================================
+   HEART ICON
+========================================= */
+
+.wishlist-btn svg {
+    width: 22px !important;
+    height: 22px !important;
+
+    display: block;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+
+    background: #ffffff !important;
+
+    color: #e63946;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   ACTIVE HEART
+========================================= */
+
+.wishlist-btn.active {
+    color: #e63946;
+
+    background: #ffffff !important;
+}
+
+
+/* =========================================
+   ACTIVE HOVER
+========================================= */
+
+.wishlist-btn.active:hover {
+    color: #d62839;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   CLICK
+========================================= */
+
+.wishlist-btn:active {
+    transform: scale(0.92);
+}
+
+
+/* =========================================
+   IMPORTANT
+   Prevent other product button CSS
+   from making it full width
+========================================= */
+
+.product-card .wishlist-btn {
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+    max-width: 42px !important;
+
+    min-height: 42px !important;
+    max-height: 42px !important;
+
+    padding: 0 !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .wishlist-btn {
+        top: 8px !important;
+        right: 8px !important;
+
+        width: 38px !important;
+        height: 38px !important;
+
+        min-width: 38px !important;
+        max-width: 38px !important;
+
+        min-height: 38px !important;
+        max-height: 38px !important;
+    }
+
+    .wishlist-btn svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+}

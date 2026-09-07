@@ -1,0 +1,505 @@
+.admin-riders-page {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.admin-riders-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.admin-riders-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.admin-riders-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.admin-riders-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-riders-refresh,
+.admin-riders-add {
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #334155;
+    padding: 11px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-riders-add {
+    border-color: #6c4ce8;
+    background: #6c4ce8;
+    color: #ffffff;
+}
+
+.admin-riders-add:hover {
+    background: #5b3ed1;
+}
+
+.admin-riders-refresh:hover {
+    background: #f8fafc;
+}
+
+.admin-riders-refresh:disabled,
+.admin-riders-add:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* ======================================================
+   ERROR
+====================================================== */
+
+.admin-riders-error {
+    background: #fff1f2;
+    border: 1px solid #fecaca;
+    border-radius: 14px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    color: #dc2626;
+    margin-bottom: 20px;
+}
+
+.admin-riders-error strong {
+    font-size: 14px;
+}
+
+.admin-riders-error p {
+    margin: 4px 0 8px;
+    font-size: 13px;
+}
+
+.admin-riders-error button {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/* ======================================================
+   TABS
+====================================================== */
+
+.admin-riders-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 6px;
+    width: fit-content;
+}
+
+.admin-riders-tabs button {
+    border: none;
+    background: transparent;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.admin-riders-tabs button.active {
+    background: #6c4ce8;
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   SEARCH
+====================================================== */
+
+.admin-riders-search {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0 14px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    max-width: 420px;
+}
+
+.admin-riders-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #0f172a;
+    background: transparent;
+}
+
+
+/* ======================================================
+   EMPTY
+====================================================== */
+
+.admin-riders-empty {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.admin-riders-empty svg {
+    color: #6c4ce8;
+    margin-bottom: 12px;
+}
+
+.admin-riders-empty h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.admin-riders-empty p {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+
+/* ======================================================
+   RIDERS GRID
+====================================================== */
+
+.admin-riders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+.admin-rider-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-rider-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #f0eaff;
+    color: #6c4ce8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.admin-rider-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-rider-info strong {
+    display: block;
+    font-size: 14px;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.admin-rider-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.admin-rider-count {
+    color: #6c4ce8 !important;
+    font-weight: 700;
+}
+
+.admin-rider-delete {
+    border: none;
+    background: #fee2e2;
+    color: #dc2626;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.15s ease;
+}
+
+.admin-rider-delete:hover {
+    background: #fecaca;
+}
+
+.admin-rider-delete:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ======================================================
+   DELIVERIES TABLE
+====================================================== */
+
+.admin-deliveries-table-wrapper {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: auto;
+}
+
+.admin-deliveries-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.admin-deliveries-table thead th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    padding: 14px 18px;
+    border-bottom: 1px solid #f1f5f9;
+    background: #fafbfe;
+}
+
+.admin-deliveries-table tbody td {
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-deliveries-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-deliveries-table select {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.admin-delivery-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ======================================================
+   MODAL
+====================================================== */
+
+.admin-riders-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 16px;
+}
+
+.admin-riders-modal {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.admin-riders-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.admin-riders-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.admin-riders-modal-header button {
+    border: none;
+    background: #f1f5f9;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.admin-riders-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-riders-modal label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+    margin-top: 8px;
+}
+
+.admin-riders-modal input {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 11px 12px;
+    font-size: 13px;
+    outline: none;
+}
+
+.admin-riders-modal input:focus {
+    border-color: #6c4ce8;
+}
+
+.admin-riders-submit {
+    margin-top: 16px;
+    border: none;
+    background: #6c4ce8;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-riders-submit:hover {
+    background: #5b3ed1;
+}
+
+.admin-riders-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* ======================================================
+   LOADING
+====================================================== */
+
+.admin-riders-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    color: #64748b;
+}
+
+.admin-riders-loading svg {
+    color: #6c4ce8;
+    margin-bottom: 12px;
+}
+
+.admin-riders-spin {
+    animation: adminRidersSpin 1s linear infinite;
+}
+
+@keyframes adminRidersSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 640px) {
+
+    .admin-riders-page {
+        padding: 16px;
+    }
+
+    .admin-riders-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-riders-header-actions {
+        width: 100%;
+    }
+
+    .admin-riders-refresh,
+    .admin-riders-add {
+        flex: 1;
+        justify-content: center;
+    }
+
+}

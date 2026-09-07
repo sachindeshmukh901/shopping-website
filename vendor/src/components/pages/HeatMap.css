@@ -1,0 +1,427 @@
+.vendor-heatmap-page {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 34px;
+    background: #f7f8fc;
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.vendor-heatmap-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.vendor-heatmap-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.vendor-heatmap-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.vendor-heatmap-refresh {
+    border: none;
+    background: #175c2e;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vendor-heatmap-refresh:hover {
+    background: #124d25;
+}
+
+.vendor-heatmap-refresh:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* ======================================================
+   ERROR
+====================================================== */
+
+.vendor-heatmap-error {
+    background: #fff1f2;
+    border: 1px solid #fecaca;
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #dc2626;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.vendor-heatmap-error span {
+    flex: 1;
+}
+
+.vendor-heatmap-error button {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/* ======================================================
+   STATS
+====================================================== */
+
+.vendor-heatmap-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.vendor-heatmap-stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.vendor-heatmap-stat-card .stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon.orders {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.stat-icon.customers {
+    background: #f0fdf4;
+    color: #175c2e;
+}
+
+.stat-icon.cities {
+    background: #fefce8;
+    color: #a16207;
+}
+
+.stat-icon.revenue {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.vendor-heatmap-stat-card span {
+    display: block;
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.vendor-heatmap-stat-card strong {
+    font-size: 20px;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+
+/* ======================================================
+   SEARCH
+====================================================== */
+
+.vendor-heatmap-search {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 0 16px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+.vendor-heatmap-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #0f172a;
+    background: transparent;
+}
+
+
+/* ======================================================
+   MAP
+====================================================== */
+
+.vendor-heatmap-map-wrapper {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 460px;
+}
+
+.vendor-heatmap-map {
+    width: 100%;
+    height: 100%;
+}
+
+.vendor-heatmap-loading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #64748b;
+}
+
+.vendor-heatmap-loading svg {
+    color: #175c2e;
+}
+
+
+/* ======================================================
+   MAP POPUP
+====================================================== */
+
+.vendor-map-popup {
+    min-width: 180px;
+}
+
+.vendor-map-popup .popup-order-id {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #175c2e;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 999px;
+    margin-bottom: 6px;
+    letter-spacing: 0.4px;
+}
+
+.vendor-map-popup h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.vendor-map-popup p {
+    margin: 4px 0;
+    font-size: 12px;
+    color: #475569;
+}
+
+
+/* ======================================================
+   LOCATION LIST
+====================================================== */
+
+.vendor-heatmap-list {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 22px;
+}
+
+.vendor-heatmap-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.vendor-heatmap-list-header h2 {
+    margin: 0;
+    font-size: 17px;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.vendor-heatmap-list-header p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.vendor-heatmap-list-header strong {
+    font-size: 15px;
+    color: #175c2e;
+    font-weight: 800;
+}
+
+.vendor-heatmap-empty {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.vendor-heatmap-empty svg {
+    color: #175c2e;
+    margin-bottom: 10px;
+}
+
+.vendor-heatmap-empty h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.vendor-heatmap-empty p {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.vendor-heatmap-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vendor-heatmap-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #edf1f5;
+    border-radius: 14px;
+    background: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.15s ease;
+}
+
+.vendor-heatmap-row:hover {
+    background: #f7f8fc;
+    border-color: #175c2e;
+}
+
+.vendor-heatmap-row .row-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #f0fdf4;
+    color: #175c2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vendor-heatmap-row .row-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.vendor-heatmap-row .row-info strong {
+    display: block;
+    font-size: 13px;
+    color: #0f172a;
+}
+
+.vendor-heatmap-row .row-info span {
+    display: block;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vendor-heatmap-row .row-order {
+    font-size: 12px;
+    font-weight: 800;
+    color: #175c2e;
+    flex-shrink: 0;
+}
+
+
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+
+.vendor-heatmap-spin {
+    animation: vendorHeatmapSpin 1s linear infinite;
+}
+
+@keyframes vendorHeatmapSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1000px) {
+
+    .vendor-heatmap-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .vendor-heatmap-page {
+        padding: 18px;
+    }
+
+    .vendor-heatmap-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vendor-heatmap-refresh {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vendor-heatmap-stats {
+        grid-template-columns: 1fr;
+    }
+
+}

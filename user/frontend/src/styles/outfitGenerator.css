@@ -1,0 +1,1171 @@
+/* =====================================================
+   PAGE
+===================================================== */
+
+.outfit-page {
+    min-height: 100vh;
+    background: #f6f7fb;
+    padding: 55px 7%;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.outfit-header {
+    max-width: 1250px;
+    margin: 0 auto 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.outfit-header-icon {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eeeeff;
+    color: #5046e5;
+
+    font-size: 28px;
+}
+
+.outfit-header-label {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #5046e5;
+
+    margin-bottom: 5px;
+}
+
+.outfit-header h1 {
+    margin: 0;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    color: #101828;
+}
+
+.outfit-header p {
+    margin: 7px 0 0;
+
+    color: #667085;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.outfit-container {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.95fr) minmax(0, 1.05fr);
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.outfit-form-card,
+.outfit-result-card {
+    background: #ffffff;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 40px rgba(16, 24, 40, 0.07);
+}
+
+.outfit-form-card {
+    padding: 30px;
+}
+
+.outfit-result-card {
+    padding: 30px;
+
+    min-height: 620px;
+}
+
+
+/* =====================================================
+   FORM TITLE
+===================================================== */
+
+.form-title-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.form-title-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #eeeeff;
+    color: #5046e5;
+
+    font-size: 22px;
+}
+
+.form-title-row h2 {
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 23px;
+}
+
+.form-title-row p {
+    margin: 5px 0 0;
+
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.outfit-loading {
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+.outfit-loading svg {
+    color: #5046e5;
+
+    font-size: 25px;
+
+    animation: outfitSpin 1s linear infinite;
+}
+
+@keyframes outfitSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   FORM GRID
+===================================================== */
+
+.outfit-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.outfit-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.outfit-form-group label {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #344054;
+}
+
+.outfit-form-group select,
+.outfit-form-group input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    padding: 0 14px;
+
+    font-size: 15px;
+
+    color: #101828;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.outfit-form-group select:focus,
+.outfit-form-group input:focus {
+    border-color: #5046e5;
+
+    box-shadow:
+        0 0 0 4px rgba(80, 70, 229, 0.1);
+}
+
+
+/* =====================================================
+   BUDGET
+===================================================== */
+
+.budget-input {
+    display: flex;
+
+    height: 48px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 11px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.budget-input span {
+    width: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f9fafb;
+
+    color: #5046e5;
+
+    font-weight: 800;
+
+    border-right: 1px solid #eaecf0;
+}
+
+.budget-input input {
+    border: 0;
+
+    border-radius: 0;
+
+    height: 100%;
+}
+
+.budget-input:focus-within {
+    border-color: #5046e5;
+
+    box-shadow:
+        0 0 0 4px rgba(80, 70, 229, 0.1);
+}
+
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+.form-summary {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: #f8f9fc;
+
+    border: 1px solid #eaecf0;
+}
+
+.form-summary-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    color: #344054;
+}
+
+.form-summary-title svg {
+    color: #12b76a;
+}
+
+.form-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.form-summary-grid div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.form-summary-grid small {
+    color: #98a2b3;
+
+    font-size: 11px;
+}
+
+.form-summary-grid strong {
+    color: #101828;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.outfit-error {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    padding: 13px 15px;
+
+    border-radius: 11px;
+
+    background: #fff4f4;
+
+    border: 1px solid #fecaca;
+
+    color: #d92d20;
+
+    font-size: 14px;
+}
+
+.outfit-error svg {
+    flex-shrink: 0;
+}
+
+.outfit-error button {
+    margin-left: auto;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #5046e5;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   GENERATE BUTTON
+===================================================== */
+
+.generate-outfit-button {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 22px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background: #5046e5;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s;
+}
+
+.generate-outfit-button:hover {
+    background: #4338ca;
+
+    transform: translateY(-1px);
+}
+
+.generate-outfit-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   EMPTY RESULT
+===================================================== */
+
+.outfit-empty,
+.outfit-no-result {
+    min-height: 555px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.empty-icon {
+    width: 78px;
+    height: 78px;
+
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eeeeff;
+
+    color: #5046e5;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.error-icon {
+    background: #fff1f0;
+
+    color: #d92d20;
+}
+
+.outfit-empty h2,
+.outfit-no-result h2 {
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 23px;
+}
+
+.outfit-empty p,
+.outfit-no-result p {
+    max-width: 420px;
+
+    margin: 10px 0 0;
+
+    color: #667085;
+
+    line-height: 1.6;
+}
+
+.outfit-no-result button {
+    margin-top: 20px;
+
+    height: 44px;
+
+    padding: 0 18px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   RESULT HEADER
+===================================================== */
+
+.result-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid #eaecf0;
+}
+
+.result-top span {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    color: #5046e5;
+}
+
+.result-top h2 {
+    margin: 5px 0;
+
+    font-size: 24px;
+
+    color: #101828;
+}
+
+.result-top p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+}
+
+.regenerate-button {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #475467;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.regenerate-button:hover {
+    color: #5046e5;
+
+    border-color: #5046e5;
+}
+
+
+/* =====================================================
+   RESULT SELECTION
+===================================================== */
+
+.result-selection {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.selection-chip {
+    padding: 12px;
+
+    border-radius: 11px;
+
+    background: #f8f9fc;
+
+    border: 1px solid #eaecf0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.selection-chip small {
+    color: #98a2b3;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+}
+
+.selection-chip strong {
+    color: #344054;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PRODUCT HEADER
+===================================================== */
+
+.matching-products-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 14px;
+}
+
+.matching-products-header h3 {
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 18px;
+}
+
+.matching-products-header p {
+    margin: 4px 0 0;
+
+    color: #98a2b3;
+
+    font-size: 12px;
+}
+
+.inventory-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: #ecfdf3;
+
+    color: #027a48;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PRODUCT LIST
+===================================================== */
+
+.outfit-products {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.outfit-product {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 13px;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    transition: 0.2s;
+}
+
+.outfit-product:hover {
+    border-color: #c7c4ff;
+
+    box-shadow:
+        0 8px 20px rgba(16, 24, 40, 0.06);
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+.outfit-product-image {
+    width: 82px;
+    height: 95px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #f2f4f7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: #98a2b3;
+
+    font-size: 25px;
+}
+
+.outfit-product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   PRODUCT INFO
+===================================================== */
+
+.outfit-product-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.product-category {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    color: #667085;
+
+    font-weight: 700;
+}
+
+.outfit-product-info h3 {
+    margin: 4px 0;
+
+    font-size: 15px;
+
+    color: #101828;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.product-details {
+    display: flex;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+}
+
+.product-details span {
+    padding: 3px 7px;
+
+    border-radius: 5px;
+
+    background: #f2f4f7;
+
+    color: #667085;
+
+    font-size: 10px;
+}
+
+.outfit-product-info>strong {
+    display: block;
+
+    color: #101828;
+
+    font-size: 17px;
+}
+
+.view-product-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 6px;
+
+    color: #5046e5;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.product-check {
+    flex-shrink: 0;
+
+    color: #12b76a;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.outfit-total {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding: 17px;
+
+    border-radius: 13px;
+
+    background: #f8f9fc;
+
+    border: 1px solid #eaecf0;
+}
+
+.outfit-total div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.outfit-total span {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #344054;
+}
+
+.outfit-total small {
+    color: #98a2b3;
+
+    font-size: 11px;
+}
+
+.outfit-total strong {
+    color: #5046e5;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   BUDGET PROGRESS
+===================================================== */
+
+.budget-progress-wrapper {
+    margin-top: 16px;
+}
+
+.budget-progress-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    color: #667085;
+}
+
+.budget-progress-header strong {
+    color: #344054;
+}
+
+.budget-progress {
+    width: 100%;
+
+    height: 7px;
+
+    border-radius: 20px;
+
+    background: #eaecf0;
+
+    overflow: hidden;
+}
+
+.budget-progress div {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #5046e5;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =====================================================
+   REMAINING
+===================================================== */
+
+.remaining-budget {
+    margin-top: 12px;
+
+    padding: 13px 15px;
+
+    border-radius: 11px;
+
+    background: #ecfdf3;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.remaining-budget div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #027a48;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.remaining-budget strong {
+    color: #027a48;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.outfit-actions {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.save-outfit-button,
+.new-outfit-button {
+    height: 47px;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.save-outfit-button {
+    border: 0;
+
+    background: #5046e5;
+
+    color: #ffffff;
+}
+
+.save-outfit-button:hover {
+    background: #4338ca;
+}
+
+.new-outfit-button {
+    border: 1px solid #d0d5dd;
+
+    background: #ffffff;
+
+    color: #344054;
+}
+
+.new-outfit-button:hover {
+    border-color: #5046e5;
+
+    color: #5046e5;
+}
+
+.save-outfit-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .outfit-container {
+        grid-template-columns: 1fr;
+    }
+
+    .outfit-result-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .outfit-page {
+        padding: 30px 15px;
+    }
+
+    .outfit-header {
+        align-items: flex-start;
+    }
+
+    .outfit-header h1 {
+        font-size: 28px;
+    }
+
+    .outfit-form-card,
+    .outfit-result-card {
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .outfit-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-summary-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .result-selection {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .outfit-product {
+        align-items: flex-start;
+    }
+
+    .outfit-product-image {
+        width: 70px;
+        height: 82px;
+    }
+
+    .outfit-actions {
+        grid-template-columns: 1fr;
+    }
+
+}

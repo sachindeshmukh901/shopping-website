@@ -1,0 +1,400 @@
+/* =========================================
+   MEN PAGE
+========================================= */
+
+.men-hero {
+    width: 100%;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+.men-hero .hero-banner {
+    width: 100%;
+    height: 420px;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.men-categories {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 28px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    flex-wrap: wrap;
+}
+
+.men-categories .cat {
+    padding: 11px 24px;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.men-categories .cat:hover {
+    border-color: #111111;
+    background: #111111;
+    color: #ffffff;
+}
+
+.men-categories .cat.active {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+
+/* =========================================
+   PRODUCTS SECTION
+========================================= */
+
+.men-products {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 45px 40px 70px;
+    min-height: 400px;
+}
+
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
+
+.men-products .products-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.men-products .product-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.men-products .product-card:hover {
+    transform: translateY(-5px);
+    border-color: #dddddd;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.men-products .product-image-wrapper {
+    width: 100%;
+    height: 330px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.men-products .product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.men-products .product-card:hover .product-image-wrapper img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   NO IMAGE
+========================================= */
+
+.men-products .no-product-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    font-size: 14px;
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.men-products .product-card h3 {
+    margin: 17px 18px 6px;
+    color: #171717;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.men-products .product-brand {
+    margin: 0 18px 5px;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SHOP NAME
+========================================= */
+
+.men-products .product-shop {
+    margin: 0 18px 13px;
+    color: #888888;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRICE ROW
+========================================= */
+
+.men-products .price-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin: 0 18px 8px;
+}
+
+.men-products .new-price {
+    color: #111111;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.men-products .price-row del {
+    color: #999999;
+    font-size: 13px;
+}
+
+.men-products .discount {
+    color: #15803d;
+    background: #ecfdf3;
+    padding: 4px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   STOCK
+========================================= */
+
+.men-products .product-stock {
+    margin: 0 18px 14px;
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+.men-products .cart-btn {
+    width: calc(100% - 36px);
+    margin: 0 18px;
+    height: 43px;
+    border: none;
+    border-radius: 7px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+.men-products .cart-btn:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+.men-products .cart-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   DISABLED / OUT OF STOCK
+========================================= */
+
+.men-products .cart-btn:disabled {
+    background: #dddddd;
+    color: #888888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   LOADING / ERROR / EMPTY
+========================================= */
+
+.men-products .products-message {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #666666;
+    font-size: 15px;
+    text-align: center;
+}
+
+.men-products .products-message.error {
+    color: #dc2626;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .men-products .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .men-products .product-image-wrapper {
+        height: 300px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .men-hero .hero-banner {
+        height: 320px;
+    }
+
+    .men-products {
+        padding: 35px 25px 55px;
+    }
+
+    .men-products .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .men-products .product-image-wrapper {
+        height: 280px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .men-hero .hero-banner {
+        height: 230px;
+    }
+
+    .men-categories {
+        justify-content: flex-start;
+        padding: 20px 15px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .men-categories .cat {
+        flex-shrink: 0;
+        padding: 9px 17px;
+        font-size: 13px;
+    }
+
+    .men-products {
+        padding: 25px 15px 45px;
+    }
+
+    .men-products .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .men-products .product-image-wrapper {
+        height: 220px;
+    }
+
+    .men-products .product-card h3 {
+        margin: 12px 12px 5px;
+        font-size: 14px;
+    }
+
+    .men-products .product-brand,
+    .men-products .product-shop {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .men-products .price-row {
+        margin-left: 12px;
+        margin-right: 12px;
+        gap: 5px;
+    }
+
+    .men-products .new-price {
+        font-size: 15px;
+    }
+
+    .men-products .product-stock {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .men-products .cart-btn {
+        width: calc(100% - 24px);
+        margin: 0 12px;
+        height: 39px;
+        font-size: 12px;
+    }
+
+}

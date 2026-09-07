@@ -1,0 +1,691 @@
+/* ==========================================
+   PAGE
+========================================== */
+
+.future-price-page {
+  min-height: 100vh;
+  background: #f7f8fc;
+  padding: 45px 5%;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.future-price-header {
+  max-width: 1450px;
+  margin: 0 auto 30px;
+}
+
+.future-price-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.future-price-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #eeeaff;
+  color: #5146e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.future-price-title h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #111827;
+  font-weight: 750;
+}
+
+.future-price-title p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 16px;
+}
+
+
+/* ==========================================
+   MAIN TWO COLUMN GRID
+========================================== */
+
+.future-price-main-grid {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+
+/* ==========================================
+   CREATE ALERT CARD
+========================================== */
+
+.price-alert-form-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(16, 24, 40, 0.08);
+  border: 1px solid #eef0f5;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CARD HEADING
+========================================== */
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.card-heading-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 17px;
+  background: #eeeaff;
+  color: #5146e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.card-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 27px;
+}
+
+.card-heading p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 15px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.price-form-group {
+  margin-bottom: 22px;
+}
+
+.price-form-group label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 15px;
+  font-weight: 650;
+  color: #101828;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.price-form-group select {
+  width: 100%;
+  height: 56px;
+  padding: 0 18px;
+  border: 1px solid #d9dee8;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #172033;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.price-form-group select:hover {
+  border-color: #9b93ff;
+}
+
+.price-form-group select:focus {
+  border-color: #5146e5;
+  box-shadow: 0 0 0 3px rgba(81, 70, 229, 0.12);
+}
+
+
+/* ==========================================
+   PRODUCT ERROR
+========================================== */
+
+.product-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   SELECTED PRODUCT
+========================================== */
+
+.selected-product-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 18px;
+  margin: -5px 0 22px;
+  border-radius: 13px;
+  background: #f7f7ff;
+  border: 1px solid #e5e3ff;
+}
+
+.selected-product-price span {
+  display: block;
+  font-size: 13px;
+  color: #667085;
+  margin-bottom: 3px;
+}
+
+.selected-product-price strong {
+  font-size: 21px;
+  color: #111827;
+}
+
+.selected-product-name {
+  max-width: 45%;
+  text-align: right;
+  color: #5146e5;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+
+/* ==========================================
+   PRICE INPUT
+========================================== */
+
+.price-input {
+  display: flex;
+  height: 56px;
+  border: 1px solid #d9dee8;
+  border-radius: 13px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.price-input:focus-within {
+  border-color: #5146e5;
+  box-shadow: 0 0 0 3px rgba(81, 70, 229, 0.12);
+}
+
+.price-input span {
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6fa;
+  color: #5146e5;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.price-input input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 0 17px;
+  font-size: 16px;
+  color: #111827;
+}
+
+
+/* ==========================================
+   SAVING
+========================================== */
+
+.saving-preview {
+  margin: -8px 0 20px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  color: #027a48;
+  font-size: 14px;
+}
+
+.saving-preview strong {
+  font-weight: 750;
+}
+
+
+/* ==========================================
+   CREATE BUTTON
+========================================== */
+
+.create-alert-button {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 12px;
+  background: #5146e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s ease;
+}
+
+.create-alert-button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.create-alert-button:active {
+  transform: translateY(0);
+}
+
+
+/* ==========================================
+   MY ALERTS
+========================================== */
+
+.my-alerts-section {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(16, 24, 40, 0.08);
+  border: 1px solid #eef0f5;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ALERT HEADER
+========================================== */
+
+.my-alerts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.my-alerts-header h2 {
+  margin: 0;
+  font-size: 27px;
+  color: #111827;
+}
+
+.my-alerts-header p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   CHECK NOW
+========================================== */
+
+.check-all-button {
+  height: 42px;
+  padding: 0 17px;
+  border: 1px solid #d9dee8;
+  background: #ffffff;
+  color: #344054;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.check-all-button:hover {
+  border-color: #5146e5;
+  color: #5146e5;
+  background: #f8f7ff;
+}
+
+.check-all-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   NO ALERT
+========================================== */
+
+.no-alerts {
+  min-height: 250px;
+  border: 1px dashed #d8dce5;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.no-alerts > svg {
+  font-size: 30px;
+  color: #5146e5;
+  margin-bottom: 12px;
+}
+
+.no-alerts h3 {
+  margin: 0 0 6px;
+  color: #111827;
+}
+
+.no-alerts p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   ALERT GRID
+========================================== */
+
+.alerts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+/* ==========================================
+   ALERT CARD
+========================================== */
+
+.alert-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.alert-card:hover {
+  border-color: #c9c5ff;
+  box-shadow: 0 7px 22px rgba(16, 24, 40, 0.07);
+}
+
+
+/* ==========================================
+   ALERT TOP
+========================================== */
+
+.alert-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.alert-card-top h3 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 18px;
+}
+
+.alert-card-top small {
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.alert-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 30px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.alert-status.reached {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+
+/* ==========================================
+   PRICES
+========================================== */
+
+.alert-prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.alert-prices > div {
+  background: #f8fafc;
+  border: 1px solid #e8ebf0;
+  border-radius: 13px;
+  padding: 13px 14px;
+}
+
+.alert-prices span {
+  display: block;
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.alert-prices strong {
+  color: #111827;
+  font-size: 21px;
+}
+
+.alert-prices .target-price {
+  color: #5146e5;
+}
+
+
+/* ==========================================
+   PRICE DROP MESSAGE
+========================================== */
+
+.price-drop-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 13px;
+}
+
+.price-drop-message svg {
+  flex-shrink: 0;
+}
+
+
+/* ==========================================
+   TARGET MESSAGE
+========================================== */
+
+.target-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  color: #027a48;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.alert-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 48px;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.check-price-button {
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #5146e5;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s ease;
+}
+
+.check-price-button:hover {
+  background: #4338ca;
+}
+
+.check-price-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.delete-alert-button {
+  width: 48px;
+  height: 46px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fffafa;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-alert-button:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+
+/* ==========================================
+   ROTATION
+========================================== */
+
+.rotate-icon {
+  animation: rotateIcon 1s linear infinite;
+}
+
+@keyframes rotateIcon {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .future-price-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .future-price-page {
+    padding: 25px 15px;
+  }
+
+  .future-price-title h1 {
+    font-size: 27px;
+  }
+
+  .price-alert-form-card,
+  .my-alerts-section {
+    padding: 20px;
+  }
+
+  .my-alerts-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .check-all-button {
+    width: 100%;
+  }
+
+  .alert-card-top {
+    flex-direction: column;
+  }
+
+  .alert-status {
+    align-self: flex-start;
+  }
+
+  .alert-prices {
+    grid-template-columns: 1fr;
+  }
+
+}

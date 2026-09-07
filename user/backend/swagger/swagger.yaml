@@ -1,0 +1,733 @@
+openapi: 3.0.3
+
+info:
+  title: ORGOS Authentication API
+  version: 1.0.0
+  description: |
+    ORGOS Authentication REST API Documentation.
+
+    Features:
+      - User Registration
+      - User Login
+      - User Profile
+      - Update Profile
+      - Change Password
+      - Forgot Password
+      - Logout
+      - Delete Account
+
+servers:
+  - url: https://orgos-backend-l7mx.onrender.com
+    description: Local Development Server
+
+tags:
+  - name: Authentication
+    description: User Authentication APIs
+
+components:
+
+  securitySchemes:
+
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+
+    RegisterRequest:
+      type: object
+      required:
+        - full_name
+        - email
+        - phone
+        - password
+        - gender
+
+      properties:
+
+        full_name:
+          type: string
+          example: Ritvik Kumar
+
+        email:
+          type: string
+          example: ritvik@gmail.com
+
+        phone:
+          type: string
+          example: "9876543210"
+
+        password:
+          type: string
+          example: Ritvik@123
+
+        gender:
+          type: string
+          example: Male
+
+    LoginRequest:
+      type: object
+
+      required:
+        - email
+        - password
+
+      properties:
+
+        email:
+          type: string
+          example: ritvik@gmail.com
+
+        password:
+          type: string
+          example: Ritvik@123
+
+    SuccessResponse:
+
+      type: object
+
+      properties:
+
+        success:
+          type: boolean
+          example: true
+
+        message:
+          type: string
+
+    ErrorResponse:
+
+      type: object
+
+      properties:
+
+        success:
+          type: boolean
+          example: false
+
+        message:
+          type: string
+
+    User:
+
+      type: object
+
+      properties:
+
+        user_id:
+          type: integer
+          example: 1
+
+        full_name:
+          type: string
+          example: Ritvik Kumar
+
+        email:
+          type: string
+          example: ritvik@gmail.com
+
+        phone:
+          type: string
+          example: "9876543210"
+
+        gender:
+          type: string
+          example: Male
+
+        dob:
+          type: string
+          example: 2001-10-15
+
+        city:
+          type: string
+          example: Patna
+
+        state:
+          type: string
+          example: Bihar
+
+        pincode:
+          type: string
+          example: "800001"
+
+        profile_image:
+          type: string
+          example: profile.png
+
+        status:
+          type: string
+          example: Active
+
+paths:
+
+  /api/auth/register:
+
+    post:
+
+      tags:
+        - Authentication
+
+      summary: Register New User
+
+      description: Register a new user in the ORGOS application.
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+
+      responses:
+
+        '201':
+
+          description: Registration Successful
+
+          content:
+
+            application/json:
+
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+
+              example:
+
+                success: true
+                message: User Registered Successfully
+
+        '400':
+
+          description: Validation Error
+
+          content:
+
+            application/json:
+
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+              example:
+
+                success: false
+                message: Email already exists
+
+        '500':
+
+          description: Internal Server Error
+
+  /api/auth/login:
+
+    post:
+
+      tags:
+        - Authentication
+
+      summary: Login User
+
+      description: Login user and generate JWT Token.
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+
+              $ref: '#/components/schemas/LoginRequest'
+
+      responses:
+
+        '200':
+
+          description: Login Successful
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+                message: Login Successful
+
+                token: JWT_TOKEN
+
+                user:
+
+                  user_id: 1
+                  full_name: Ritvik Kumar
+                  email: ritvik@gmail.com
+                  phone: "9876543210"
+                  gender: Male
+
+        '401':
+
+          description: Invalid Credentials
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Invalid Password
+
+        '500':
+
+          description: Internal Server Error
+
+            /api/auth/profile:
+
+    get:
+
+      tags:
+        - Authentication
+
+      summary: Get User Profile
+
+      description: Returns the authenticated user's profile information.
+
+      security:
+        - BearerAuth: []
+
+      responses:
+
+        '200':
+
+          description: Profile Retrieved Successfully
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+
+                user:
+
+                  user_id: 1
+                  full_name: Ritvik Kumar
+                  email: ritvik@gmail.com
+                  phone: "9876543210"
+                  gender: Male
+                  dob: "2001-10-15"
+                  city: Patna
+                  state: Bihar
+                  pincode: "800001"
+                  profile_image: profile.png
+                  status: Active
+
+        '401':
+
+          description: Unauthorized
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Token Required
+
+        '500':
+
+          description: Internal Server Error
+
+
+
+  /api/auth/update-profile:
+
+    put:
+
+      tags:
+        - Authentication
+
+      summary: Update User Profile
+
+      description: Update the authenticated user's profile.
+
+      security:
+        - BearerAuth: []
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+
+              type: object
+
+              properties:
+
+                full_name:
+                  type: string
+                  example: Ritvik Kumar
+
+                phone:
+                  type: string
+                  example: "9876543210"
+
+                gender:
+                  type: string
+                  example: Male
+
+                dob:
+                  type: string
+                  example: "2001-10-15"
+
+                city:
+                  type: string
+                  example: Patna
+
+                state:
+                  type: string
+                  example: Bihar
+
+                pincode:
+                  type: string
+                  example: "800001"
+
+      responses:
+
+        '200':
+
+          description: Profile Updated Successfully
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+                message: Profile Updated Successfully
+
+        '401':
+
+          description: Unauthorized
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Token Expired or Invalid
+
+        '500':
+
+          description: Internal Server Error
+
+
+
+  /api/auth/change-password:
+
+    put:
+
+      tags:
+        - Authentication
+
+      summary: Change Password
+
+      description: Change the authenticated user's password.
+
+      security:
+        - BearerAuth: []
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+
+              type: object
+
+              required:
+
+                - oldPassword
+                - newPassword
+
+              properties:
+
+                oldPassword:
+
+                  type: string
+
+                  example: Ritvik@123
+
+                newPassword:
+
+                  type: string
+
+                  example: NewPassword@123
+
+      responses:
+
+        '200':
+
+          description: Password Changed Successfully
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+                message: Password Changed Successfully
+
+        '400':
+
+          description: Validation Error
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Old Password Incorrect
+
+        '401':
+
+          description: Unauthorized
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Token Expired or Invalid
+
+        '404':
+
+          description: User Not Found
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: User not found
+
+        '500':
+
+          description: Internal Server Error
+
+
+            /api/auth/forgot-password:
+
+    put:
+
+      tags:
+        - Authentication
+
+      summary: Forgot Password
+
+      description: Reset password using registered email address.
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+
+              type: object
+
+              required:
+                - email
+                - newPassword
+
+              properties:
+
+                email:
+                  type: string
+                  example: ritvik@gmail.com
+
+                newPassword:
+                  type: string
+                  example: NewPassword@123
+
+      responses:
+
+        '200':
+
+          description: Password Reset Successfully
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+                message: Password Reset Successfully
+
+        '400':
+
+          description: Validation Error
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Email and Password Required
+
+        '404':
+
+          description: Email Not Found
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Email Not Found
+
+        '500':
+
+          description: Internal Server Error
+
+
+
+  /api/auth/logout:
+
+    post:
+
+      tags:
+        - Authentication
+
+      summary: Logout User
+
+      description: Logout the authenticated user.
+
+      security:
+        - BearerAuth: []
+
+      responses:
+
+        '200':
+
+          description: Logout Successful
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+                message: Logout Successful. Please remove the token from client.
+
+        '401':
+
+          description: Unauthorized
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Token Expired or Invalid
+
+        '500':
+
+          description: Internal Server Error
+
+
+
+  /api/auth/delete-account:
+
+    delete:
+
+      tags:
+        - Authentication
+
+      summary: Delete User Account
+
+      description: Permanently delete the authenticated user's account.
+
+      security:
+        - BearerAuth: []
+
+      responses:
+
+        '200':
+
+          description: Account Deleted Successfully
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: true
+                message: Account Deleted Successfully
+
+        '401':
+
+          description: Unauthorized
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: Token Expired or Invalid
+
+        '404':
+
+          description: User Not Found
+
+          content:
+
+            application/json:
+
+              example:
+
+                success: false
+                message: User Not Found
+
+        '500':
+
+          description: Internal Server Error

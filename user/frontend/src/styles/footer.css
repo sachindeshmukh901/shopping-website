@@ -1,0 +1,175 @@
+.footer{
+width:100%;
+background:#e8decc;
+padding:60px 40px 20px;
+overflow:hidden;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:60px;
+flex-wrap:wrap;
+}
+
+/* LEFT */
+
+.footer-left{
+width:340px;
+}
+
+.footer-logo{
+width:90px;
+}
+
+.footer-left p{
+margin-top:35px;
+font-size:20px;
+line-height:1.8;
+color:#222;
+}
+
+.footer-left h2{
+margin-top:80px;
+font-size:42px;
+font-weight:900;
+color:black;
+}
+
+/* COLUMNS */
+
+.footer-column{
+min-width:180px;
+flex:1;
+}
+
+.footer-column h3{
+font-size:28px;
+margin-bottom:35px;
+color:#111;
+}
+
+.footer-column ul{
+list-style:none;
+}
+
+.footer-column ul li{
+margin-bottom:28px;
+font-size:20px;
+color:#333;
+cursor:pointer;
+transition:0.3s;
+}
+
+.footer-column ul li a,
+.footer-left a,
+.footer a{
+text-decoration:none;
+color:inherit;
+}
+
+.footer a:hover{
+color:black;
+}
+
+.footer-column ul li:hover{
+color:black;
+transform:translateX(5px);
+}
+
+/* COPYRIGHT */
+
+.copyright{
+margin-top:50px;
+text-align:center;
+font-size:18px;
+color:#333;
+border-top:1px solid rgba(0,0,0,0.1);
+padding-top:20px;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px){
+
+.footer{
+padding:50px 25px 20px;
+}
+
+.footer-container{
+gap:40px;
+}
+
+.footer-left{
+width:100%;
+text-align:center;
+}
+
+.footer-logo{
+margin:auto;
+}
+
+.footer-left h2{
+margin-top:40px;
+}
+
+.footer-column{
+min-width:220px;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:576px){
+
+.footer{
+padding:40px 20px 20px;
+}
+
+.footer-container{
+flex-direction:column;
+gap:35px;
+}
+
+.footer-left{
+width:100%;
+text-align:center;
+}
+
+.footer-left p{
+font-size:17px;
+line-height:1.7;
+}
+
+.footer-left h2{
+font-size:32px;
+margin-top:35px;
+}
+
+.footer-column{
+width:100%;
+text-align:center;
+}
+
+.footer-column h3{
+font-size:24px;
+margin-bottom:20px;
+}
+
+.footer-column ul li{
+font-size:17px;
+margin-bottom:18px;
+}
+
+.copyright{
+font-size:15px;
+line-height:1.6;
+}
+
+}

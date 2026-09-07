@@ -1,0 +1,1416 @@
+/* =========================================
+   WOMEN PAGE
+========================================= */
+
+.women-hero,
+.category-section,
+.women-products {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BOX SIZING
+========================================= */
+
+.women-hero *,
+.category-section *,
+.women-products * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   WOMEN HERO
+========================================= */
+
+.women-hero {
+    width: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+
+.women-banner {
+    width: 100%;
+
+    /*
+       Responsive height.
+       Image will automatically adjust
+       according to screen size.
+    */
+    height: clamp(240px, 38vw, 430px);
+
+    display: block;
+
+    /*
+       Hero can use cover because the banner
+       is designed as a full-width banner.
+    */
+    object-fit: cover;
+
+    object-position: center center;
+}
+
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.category-section {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 25px 4%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   CATEGORY BUTTON
+========================================= */
+
+.category {
+    flex: 0 0 auto;
+
+    min-height: 44px;
+
+    padding: 11px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 6px;
+
+    color: #222222;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+.category:hover {
+    background: #111111;
+
+    color: #ffffff;
+
+    border-color: #111111;
+}
+
+
+.category.active {
+    background: #111111;
+
+    color: #ffffff;
+
+    border-color: #111111;
+}
+
+
+.category:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   PRODUCTS SECTION
+========================================= */
+
+.women-products {
+    width: 100%;
+
+    padding: 45px 5%;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
+
+.products-grid {
+    width: 100%;
+
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE CONTAINER
+========================================= */
+
+.product-image {
+    width: 100%;
+
+    /*
+       Important:
+       Image container maintains same proportion
+       on every device.
+    */
+    aspect-ratio: 4 / 5;
+
+    min-height: 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    /*
+       IMPORTANT:
+       contain prevents product cropping.
+    */
+    object-fit: contain;
+
+    object-position: center center;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE HOVER
+========================================= */
+
+.product-card:hover .product-image img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.product-info {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.product-info h3 {
+    width: 100%;
+
+    margin: 0 0 8px;
+
+    color: #111111;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    /*
+       Long product names won't
+       break the card.
+    */
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    width: 100%;
+
+    margin: 0 0 5px;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   SHOP NAME
+========================================= */
+
+.shop-name {
+    width: 100%;
+
+    margin: 0 0 8px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.rating {
+    width: 100%;
+
+    margin: 8px 0;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   PRICE ROW
+========================================= */
+
+.price-row {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 12px 0;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   NEW PRICE
+========================================= */
+
+.new-price {
+    color: #111111;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   OLD PRICE
+========================================= */
+
+.price-row del {
+    color: #888888;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   DISCOUNT
+========================================= */
+
+.discount {
+    color: #0a8f3d;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   STOCK
+========================================= */
+
+.stock {
+    width: 100%;
+
+    margin: 8px 0 15px;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+.cart-btn {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 12px 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+.cart-btn:hover {
+    background: #333333;
+}
+
+
+.cart-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   LOADING / ERROR / EMPTY
+========================================= */
+
+.products-message {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    min-height: 250px;
+
+    padding: 30px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.products-message h2 {
+    margin: 0 0 8px;
+
+    color: #222222;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+}
+
+
+.products-message p {
+    margin: 0 0 20px;
+
+    color: #777777;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+.products-message.error h2 {
+    color: #d62828;
+}
+
+
+.products-message button {
+    min-height: 42px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease;
+}
+
+
+.products-message button:hover {
+    background: #333333;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+   1400px+
+========================================= */
+
+@media (min-width: 1400px) {
+
+    .women-products {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    .products-grid {
+        gap: 30px;
+    }
+
+
+    .product-info {
+        padding: 20px;
+    }
+
+
+    .product-info h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP
+   1200px
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .women-products {
+        padding: 40px 4%;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+
+    .product-info h3 {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL DESKTOP / TABLET LANDSCAPE
+   992px
+========================================= */
+
+@media (max-width: 992px) {
+
+    .women-banner {
+        height: clamp(260px, 42vw, 360px);
+    }
+
+
+    /* CATEGORY */
+
+    .category-section {
+        padding: 22px 3%;
+
+        gap: 10px;
+    }
+
+
+    .category {
+        min-height: 42px;
+
+        padding: 10px 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* PRODUCTS */
+
+    .women-products {
+        padding: 35px 3%;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    .product-info {
+        padding: 15px;
+    }
+
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+
+    .brand {
+        font-size: 13px;
+    }
+
+
+    .shop-name {
+        font-size: 12px;
+    }
+
+
+    .rating {
+        font-size: 13px;
+    }
+
+
+    .new-price {
+        font-size: 18px;
+    }
+
+
+    .cart-btn {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .women-banner {
+        width: 100%;
+
+        height: clamp(240px, 48vw, 320px);
+
+        object-fit: fill;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       CATEGORY
+    ===================================== */
+
+    .category-section {
+        justify-content: flex-start;
+
+        padding: 18px 15px;
+
+        gap: 8px;
+
+        /*
+           Categories stay in one line and
+           can be horizontally scrolled.
+        */
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+
+    .category-section::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .category {
+        min-height: 42px;
+
+        padding: 10px 17px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       PRODUCTS
+    ===================================== */
+
+    .women-products {
+        padding: 30px 20px;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    /* =====================================
+       PRODUCT IMAGE
+    ===================================== */
+
+    .product-image {
+        width: 100%;
+
+        aspect-ratio: 4 / 5;
+
+        background: #ffffff;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    .product-image img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       PRODUCT INFO
+    ===================================== */
+
+    .product-info {
+        padding: 14px;
+    }
+
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+
+    .brand {
+        font-size: 13px;
+    }
+
+
+    .shop-name {
+        font-size: 12px;
+    }
+
+
+    .rating {
+        font-size: 13px;
+    }
+
+
+    .new-price {
+        font-size: 18px;
+    }
+
+
+    .price-row del {
+        font-size: 13px;
+    }
+
+
+    .discount {
+        font-size: 12px;
+    }
+
+
+    .stock {
+        font-size: 13px;
+    }
+
+
+    .cart-btn {
+        min-height: 43px;
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   LARGE MOBILE
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .women-banner {
+        height: 260px;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       PRODUCTS
+    ===================================== */
+
+    .women-products {
+        padding: 25px 15px;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+
+    /* =====================================
+       PRODUCT CARD
+    ===================================== */
+
+    .product-card {
+        border-radius: 10px;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .product-image {
+        aspect-ratio: 4 / 5;
+
+        background: #ffffff;
+    }
+
+
+    .product-image img {
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       INFO
+    ===================================== */
+
+    .product-info {
+        padding: 12px;
+    }
+
+
+    .product-info h3 {
+        font-size: 15px;
+
+        line-height: 1.35;
+
+        margin-bottom: 6px;
+    }
+
+
+    .brand {
+        font-size: 12px;
+    }
+
+
+    .shop-name {
+        font-size: 11px;
+    }
+
+
+    .rating {
+        margin: 6px 0;
+
+        font-size: 12px;
+    }
+
+
+    .price-row {
+        gap: 6px;
+
+        margin: 9px 0;
+    }
+
+
+    .new-price {
+        font-size: 17px;
+    }
+
+
+    .price-row del {
+        font-size: 12px;
+    }
+
+
+    .discount {
+        font-size: 11px;
+    }
+
+
+    .stock {
+        margin: 7px 0 12px;
+
+        font-size: 12px;
+    }
+
+
+    .cart-btn {
+        min-height: 40px;
+
+        padding: 9px 8px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .women-banner {
+        height: 230px;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       CATEGORY
+    ===================================== */
+
+    .category-section {
+        padding: 14px 12px;
+
+        gap: 7px;
+
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+    }
+
+
+    .category {
+        min-height: 40px;
+
+        padding: 9px 14px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================
+       PRODUCTS
+    ===================================== */
+
+    .women-products {
+        padding: 22px 12px;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    /* =====================================
+       CARD
+    ===================================== */
+
+    .product-card {
+        border-radius: 9px;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .product-image {
+        aspect-ratio: 4 / 5;
+
+        background: #ffffff;
+    }
+
+
+    .product-image img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       INFO
+    ===================================== */
+
+    .product-info {
+        padding: 10px;
+    }
+
+
+    .product-info h3 {
+        font-size: 14px;
+
+        line-height: 1.3;
+    }
+
+
+    .brand {
+        font-size: 11px;
+    }
+
+
+    .shop-name {
+        font-size: 10px;
+    }
+
+
+    .rating {
+        font-size: 11px;
+    }
+
+
+    .new-price {
+        font-size: 16px;
+    }
+
+
+    .price-row del {
+        font-size: 11px;
+    }
+
+
+    .discount {
+        font-size: 10px;
+    }
+
+
+    .stock {
+        font-size: 11px;
+    }
+
+
+    .cart-btn {
+        min-height: 38px;
+
+        padding: 8px 5px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================
+       MESSAGE
+    ===================================== */
+
+    .products-message {
+        min-height: 220px;
+
+        padding: 25px 10px;
+    }
+
+
+    .products-message h2 {
+        font-size: 19px;
+    }
+
+
+    .products-message p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   360px
+========================================= */
+
+@media (max-width: 360px) {
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .women-banner {
+        height: 200px;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       CATEGORY
+    ===================================== */
+
+    .category-section {
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+        gap: 6px;
+    }
+
+
+    .category {
+        min-height: 38px;
+
+        padding: 8px 12px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================
+       PRODUCTS
+    ===================================== */
+
+    .women-products {
+        padding: 18px 10px;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .product-image {
+        aspect-ratio: 4 / 5;
+
+        background: #ffffff;
+    }
+
+
+    .product-image img {
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       INFO
+    ===================================== */
+
+    .product-info {
+        padding: 9px;
+    }
+
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+
+    .brand {
+        font-size: 10px;
+    }
+
+
+    .shop-name {
+        font-size: 9px;
+    }
+
+
+    .rating {
+        font-size: 10px;
+    }
+
+
+    .price-row {
+        gap: 4px;
+    }
+
+
+    .new-price {
+        font-size: 15px;
+    }
+
+
+    .price-row del {
+        font-size: 10px;
+    }
+
+
+    .discount {
+        font-size: 9px;
+    }
+
+
+    .stock {
+        font-size: 10px;
+    }
+
+
+    .cart-btn {
+        min-height: 36px;
+
+        padding: 7px 4px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) {
+
+    .product-card:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+
+
+    .product-card:hover .product-image img {
+        transform: none;
+    }
+
+
+    .category:hover {
+        background: #ffffff;
+
+        color: #222222;
+
+        border-color: #dddddd;
+    }
+
+
+    .category.active:hover {
+        background: #111111;
+
+        color: #ffffff;
+
+        border-color: #111111;
+    }
+
+
+    .cart-btn:hover {
+        background: #111111;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.category:focus-visible,
+.cart-btn:focus-visible,
+.products-message button:focus-visible {
+    outline: 2px solid #111111;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   PREVENT HORIZONTAL PAGE OVERFLOW
+========================================= */
+
+.women-hero,
+.category-section,
+.women-products {
+    overflow-x: hidden;
+}

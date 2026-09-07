@@ -1,0 +1,329 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:serif;
+overflow-x:hidden;
+background:white;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.about-hero{
+width:100%;
+background:#fde8df;
+padding:80px 100px;
+}
+
+.about-content{
+max-width:750px;
+}
+
+.about-tag{
+font-size:20px;
+color:#d62b2b;
+margin-bottom:25px;
+font-weight:500;
+}
+
+.about-content h1{
+font-size:72px;
+line-height:1.2;
+color:#111;
+}
+
+.about-desc{
+margin-top:40px;
+font-size:22px;
+line-height:1.7;
+color:#222;
+}
+
+/* =========================
+   PROMISE SECTION
+========================= */
+
+.promise-section{
+width:100%;
+padding:70px 60px;
+background:white;
+}
+
+.promise-section h2{
+text-align:center;
+font-size:58px;
+margin-bottom:60px;
+font-weight:700;
+color:#111;
+}
+
+.promise-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:35px;
+}
+
+.promise-card{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.promise-icon{
+width:110px;
+height:110px;
+min-width:110px;
+min-height:110px;
+
+border-radius:50%;
+
+background:#fde8df;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:42px;
+
+flex-shrink:0;
+
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.promise-card h3{
+font-size:22px;
+margin-bottom:8px;
+color:#111;
+}
+
+.promise-card p{
+font-size:16px;
+line-height:1.5;
+color:#444;
+}
+
+/* =========================
+   JOURNEY SECTION
+========================= */
+
+.journey-section{
+width:calc(100% - 120px);
+margin:60px auto;
+
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+
+gap:40px;
+
+padding:50px;
+
+border:1px solid #ddd;
+
+background:white;
+}
+
+.journey-tag{
+font-size:20px;
+color:#d62b2b;
+margin-bottom:20px;
+}
+
+.journey-left h2{
+font-size:58px;
+line-height:1.2;
+color:#111;
+}
+
+.journey-left p{
+margin-top:25px;
+font-size:20px;
+line-height:1.7;
+color:#333;
+}
+
+.journey-left button{
+margin-top:30px;
+padding:15px 40px;
+border:none;
+border-radius:8px;
+background:linear-gradient(
+90deg,
+#ff00c8,
+#ff3c00
+);
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+}
+
+.journey-center img{
+width:100%;
+height:350px;
+object-fit:cover;
+display:block;
+}
+
+.journey-right{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+align-content:center;
+}
+
+.stat h1{
+font-size:58px;
+color:#ff1e1e;
+font-weight:700;
+}
+
+.stat p{
+font-size:20px;
+margin-top:5px;
+color:#111;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+.about-hero{
+padding:60px 40px;
+}
+
+.about-content h1{
+font-size:55px;
+}
+
+.about-desc{
+font-size:18px;
+}
+
+.promise-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.journey-section{
+grid-template-columns:1fr;
+width:95%;
+}
+
+.journey-left h2{
+font-size:45px;
+}
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.about-hero{
+padding:40px 20px;
+}
+
+.about-content h1{
+font-size:42px;
+}
+
+.about-desc{
+font-size:16px;
+line-height:1.6;
+}
+
+.promise-section{
+padding:50px 20px;
+}
+
+.promise-section h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.promise-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+.promise-card{
+flex-direction:column;
+text-align:center;
+}
+
+.promise-icon{
+width:90px;
+height:90px;
+min-width:90px;
+min-height:90px;
+font-size:34px;
+}
+
+.journey-section{
+width:95%;
+padding:25px;
+margin:30px auto;
+}
+
+.journey-left h2{
+font-size:34px;
+}
+
+.journey-left p{
+font-size:16px;
+}
+
+.journey-center img{
+height:250px;
+}
+
+.journey-right{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.stat h1{
+font-size:42px;
+}
+
+.stat p{
+font-size:16px;
+}
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.about-content h1{
+font-size:34px;
+}
+
+.promise-section h2{
+font-size:28px;
+}
+
+.promise-icon{
+width:80px;
+height:80px;
+min-width:80px;
+min-height:80px;
+font-size:30px;
+}
+
+.journey-left button{
+width:100%;
+}
+
+}

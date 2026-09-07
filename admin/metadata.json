@@ -1,0 +1,6 @@
+{
+  "name": "ORGOS Admin Panel",
+  "description": "Admin login and business management dashboard for ORGOS Garments Solution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

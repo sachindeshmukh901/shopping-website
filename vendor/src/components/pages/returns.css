@@ -1,0 +1,56 @@
+/* ======================================================
+   RETURNS PAGE
+====================================================== */
+
+.return-th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 800;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+
+.return-td {
+    padding: 15px 16px;
+    font-size: 12px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+
+/* ======================================================
+   SCROLLBAR
+====================================================== */
+
+.return-td::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+
+.return-td::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 999px;
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 640px) {
+
+    .return-th {
+        padding: 12px;
+    }
+
+
+    .return-td {
+        padding: 13px 12px;
+    }
+
+}

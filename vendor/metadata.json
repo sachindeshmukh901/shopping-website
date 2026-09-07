@@ -1,0 +1,6 @@
+{
+  "name": "Orgos Vendor Panel",
+  "description": "A highly-polished responsive vendor management portal for ORGOS Garment Solution, including dashboard analytics, order tracking, and product catalogs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
